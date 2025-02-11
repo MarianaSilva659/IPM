@@ -1,0 +1,266 @@
+
+.sem-servicos{
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 60vh;
+  color: #264875;
+}
+
+.page-template {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*Conteúdo do CARD */
+.card-content {
+  display: flex;
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+}
+
+.left-column {
+  width: 70%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: black;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  overflow: hidden;
+  color: black;
+}
+
+
+.top-left{
+  flex: 1;
+  font-size: 30px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.top-right{
+   display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  flex: 1 ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  word-wrap: break-word;
+  margin-right: 4%;
+  margin-top: 4%;
+}
+
+
+.bottom-right {
+  flex: 1 ;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 7%;
+  margin-bottom: 3%;
+  font-weight: bold;
+  font-size: 24px;
+  word-wrap: break-word;
+}
+
+.bottom-left {
+  flex: 1 ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  font-size: 24px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+/*OS BOTÕES PARA FILTRAR OS SERVIÇOS*/
+.filtros {
+  margin-left: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.botao_filtra {
+  font-size: 17.5px;
+  color: black;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  margin-right: 6%;
+}
+
+.botao_filtra:focus,
+.botao_filtra:hover {
+  color: black;
+}
+
+.botao_filtra:focus:after,
+.botao_filtra:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.botao_filtra:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
+/*CARD */
+.card-link {
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 47%;
+  height: 27.5vh;
+  background-color: #bfc6c7;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 15px;
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+  max-height: calc(
+    100vh - 200px
+  ); /* Defina a altura máxima, subtraindo a altura do cabeçalho (nav) e do conteúdo principal */
+  overflow-y: auto; /*Para poder fazer scroll dentro do card-container quando existem muitos */
+}
+
+.icon_Nome {
+  display: flex;
+  align-items: center;
+}
+
+/*BOTÕES QUE FICAM DE BAIXO DO POSTO*/
+
+.botao_Tipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  background-color: #4886d9;
+  border: none;
+  border-radius: 5.5mm;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 5%;
+  padding: 12px 30px;
+  height: 6.9vh;
+}
+
+.botao_Tipo:hover {
+  background-color: #3e608c;
+}
+/*TENHO DE METER AQUI CASO SEJA CLICADO O BOTÃO DO ASIDE */
+
+.nome_Posto {
+  font-size: 36px;
+  font-weight: bold;
+  padding-left: 8%;
+}
+
+
+/*ABRANGE A PÁGINA TODA*/
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+/*É A BARRA ESQUERDA */
+.left {
+  display: flex;
+  flex-direction: column;
+  background: #9bbeec;
+  padding: 3% 0 3% 0;
+  width: 20%;
+}
+
+/*ONDE FICAM TODOS OS CARDS */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #f0f2f3;
+  padding: 3% 0 3% 0;
+  flex: 1 1 515.8px;
+}
+
+@media all and (max-width: 550px) {
+  .left {
+    flex-direction: row;
+  }
+  .main {
+    flex-direction: column;
+  }
+  main {
+    padding: 5em 0 5em 0;
+  }
+}
